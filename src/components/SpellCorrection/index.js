@@ -30,6 +30,7 @@ const SpellCorrection = () => {
             }
         ).catch(
             error => {
+                alert(error);
                 console.log(error);
             }
         ).finally(() => {
@@ -43,6 +44,7 @@ const SpellCorrection = () => {
                 autoSize={{minRows: 3, maxRows: 10}}
                 value={input}
                 onChange={onChangeInput}
+                placeholder={'Nhập đoạn văn bản cần sửa chính tả tại đây'}
             />
 
             <Button style={{marginTop: 20, marginBottom: 20}} type={'primary'} onClick={onSpellCorrection}
@@ -51,7 +53,7 @@ const SpellCorrection = () => {
             </Button>
             <Paragraph>
                 <Paragraph>
-                    <pre>{output}</pre>
+                    <pre> Kết quả: {output}</pre>
                 </Paragraph>
             </Paragraph>
 

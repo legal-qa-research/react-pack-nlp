@@ -43,6 +43,7 @@ const DiacriticRestoration = () => {
                 autoSize={{minRows: 3, maxRows: 10}}
                 value={input}
                 onChange={onChangeInput}
+                placeholder={'Nhập đoạn văn bản cần thêm dấu tại đây'}
             />
 
             <Button style={{marginTop: 20, marginBottom: 20}} type={'primary'} onClick={onSpellCorrection}
@@ -51,7 +52,7 @@ const DiacriticRestoration = () => {
             </Button>
             <Paragraph>
                 <Paragraph>
-                    <pre>{output}</pre>
+                    <pre> Kết quả: {output}</pre>
                 </Paragraph>
             </Paragraph>
 
